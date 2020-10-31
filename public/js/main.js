@@ -30,3 +30,18 @@
 		$('.scrolly').scrolly();
 
 })(jQuery);
+
+let map;
+
+function initMap() {
+  const myLatLng = { lat: -25.8851726, lng: -48.5870627 };
+  const map = new google.maps.Map(document.getElementById("mapa"), {
+    zoom: 15,
+    center: myLatLng,
+  });
+  new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "Editel Calhas",
+  });
+}
